@@ -10,9 +10,9 @@ TEST(Lab4Tests, AreaTest) {
     Octagon<int> octagon = {{0, 2}, {0, 3}, {2, 5}, {3, 5}, {5, 4}, {5, 3}, {3, 1}, {2, 0}};
     double epsilon = 5e-3;
 
-    EXPECT_TRUE(16.75 - epsilon < pentagon.getArea() || pentagon.getArea() < 16.75 + epsilon);
-    EXPECT_TRUE(7.46 - epsilon < hexagon.getArea() || hexagon.getArea() < 7.46 + epsilon);
-    EXPECT_TRUE(15.5 - epsilon < hexagon.getArea() || hexagon.getArea() < 15.5 + epsilon);
+    EXPECT_NEAR(pentagon.getArea(), 16.75, epsilon);
+    EXPECT_NEAR(hexagon.getArea(), 7.46, epsilon);
+    EXPECT_NEAR(octagon.getArea(), 15.5, epsilon);
 }
 
 TEST(Lab4Tests, CenterTest) {
